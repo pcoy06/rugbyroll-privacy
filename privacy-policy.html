@@ -120,52 +120,67 @@
   <main>
     <div class="card">
 
-      <p>Última actualización: abril de 2026</p>
+      <p>Última actualización: 20 de septiembre de 2026</p>
 
       <h2>1. Información que recopilamos</h2>
       <p>RugbyRoll recopila la siguiente información cuando usas la aplicación:</p>
       <ul>
-        <li>Nombre y apellidos</li>
-        <li>Dirección de correo electrónico</li>
-        <li>Número de teléfono (opcional)</li>
+        <li>Nombre y apellidos, dirección de correo electrónico y número de teléfono (opcional)</li>
         <li>Datos de asistencia de los jugadores del equipo</li>
+        <li>Datos de gestión del club que introducen los administradores y el cuerpo técnico: nombre, posición y número de camiseta de los jugadores (incluidos menores de edad), estado de las cuotas (pagada o pendiente), fecha de vencimiento de la licencia federativa, comunicados, calendario, planes de entrenamiento y solicitudes de material</li>
+        <li>Fotos y archivos que los usuarios deciden subir: foto o documento de la licencia federativa, comprobantes de pago, documentos del club (formularios y consentimientos), imagen del plan de entrenamiento y foto de los artículos de vestuario</li>
+        <li>El identificador de notificaciones (token) de tu dispositivo, si aceptas recibir notificaciones</li>
       </ul>
-      <p>No recopilamos datos de localización, fotos, contactos ni ningún otro dato del dispositivo.</p>
+      <p>No recopilamos datos de localización ni tus contactos, y no accedemos a tu galería: solo se sube la foto o el archivo que tú eliges expresamente. No mostramos publicidad ni utilizamos herramientas de seguimiento.</p>
 
       <h2>2. Cómo usamos tu información</h2>
       <p>Los datos recopilados se usan exclusivamente para:</p>
       <ul>
-        <li>Identificarte como usuario de la aplicación</li>
-        <li>Gestionar el acceso a los equipos de tu club</li>
-        <li>Almacenar los registros de asistencia de tu equipo</li>
+        <li>Identificarte como usuario y gestionar tu acceso al club con el rol que te corresponde</li>
+        <li>Mostrar a cada persona solo la información que le corresponde</li>
+        <li>Registrar la asistencia, las cuotas, las licencias, los documentos y el material del club</li>
+        <li>Enviarte notificaciones (aprobación de tu cuenta, comunicados del club, recordatorios de entrenamiento)</li>
         <li>Enviarte el correo de recuperación de contraseña si lo solicitas</li>
       </ul>
       <p>No vendemos ni compartimos tus datos con terceros con fines comerciales.</p>
 
-      <h2>3. Almacenamiento de datos</h2>
+      <h2>3. Almacenamiento de datos y seguridad</h2>
       <p>
-        Los datos se almacenan en Firebase Realtime Database (Google), alojado en servidores
-        de la Unión Europea (europe-west1). Firebase cumple con el Reglamento General de
-        Protección de Datos (RGPD) de la Unión Europea.
+        Los datos de la aplicación se almacenan en Firebase Realtime Database (Google), alojado en
+        servidores de la Unión Europea (europe-west1). Las fotos y los documentos se guardan en
+        Firebase Storage (Google Cloud), en servidores de Estados Unidos (us-east1). Google
+        ofrece garantías para las transferencias internacionales de datos y cumple con el
+        Reglamento General de Protección de Datos (RGPD) de la Unión Europea.
+      </p>
+      <p>
+        Los datos viajan cifrados. Cada club solo puede acceder a sus propios datos y, dentro
+        del club, cada persona ve únicamente lo que su rol permite. Las fotos y los documentos
+        están protegidos con las mismas reglas de acceso.
       </p>
       <p>Más información: <a href="https://firebase.google.com/support/privacy" target="_blank">firebase.google.com/support/privacy</a></p>
 
-      <h2>4. Datos de los jugadores</h2>
+      <h2>4. Datos de los jugadores y de menores</h2>
       <p>
-        Los nombres de los jugadores introducidos en la app son gestionados exclusivamente
-        por el administrador del club. RugbyRoll no tiene acceso ni control sobre estos datos
-        más allá de su almacenamiento técnico.
+        Los datos de los jugadores y de sus familias, incluidos los de menores de edad, los
+        introducen y gestionan el club y sus administradores, que son quienes deciden para qué se
+        usan. RugbyRoll los almacena por cuenta del club, únicamente para prestar el servicio, y no
+        accede a ellos ni los utiliza para ningún otro fin. Corresponde al club contar con la
+        autorización de las familias para tratar estos datos.
       </p>
 
       <h2>5. Retención de datos</h2>
       <p>
-        Los datos se conservan mientras la cuenta del club esté activa. El administrador
-        del club puede eliminar jugadores, equipos y registros de asistencia en cualquier
-        momento desde la propia app.
+        Los datos se conservan mientras la cuenta del club esté activa. Los administradores del
+        club pueden eliminar jugadores, equipos, registros de asistencia, documentos y archivos en
+        cualquier momento desde la propia app.
+      </p>
+      <p>
+        Puedes eliminar tu propia cuenta desde la app: Mi Perfil &rarr; Eliminar cuenta. Esto
+        borra tu perfil y tu acceso.
       </p>
       <p>
         Para solicitar la eliminación completa de todos los datos de tu club, contacta
-        con nosotros en <a href="mailto:rugbyroll.app@gmail.com">rugbyroll.app@gmail.com</a>.
+        con nosotros en <a href="mailto:rugbyroll.soporte@gmail.com">rugbyroll.soporte@gmail.com</a>.
       </p>
 
       <h2>6. Tus derechos</h2>
@@ -178,7 +193,7 @@
       </ul>
       <p>Para ejercer cualquiera de estos derechos, contacta con nosotros:</p>
       <div class="contact-box">
-        <p>📧 <a href="mailto:rugbyroll.app@gmail.com">rugbyroll.app@gmail.com</a></p>
+        <p>📧 <a href="mailto:rugbyroll.soporte@gmail.com">rugbyroll.soporte@gmail.com</a></p>
       </div>
 
       <h2>7. Servicios de terceros</h2>
@@ -186,6 +201,8 @@
       <ul>
         <li><strong>Firebase Authentication (Google)</strong> — gestión de cuentas de usuario</li>
         <li><strong>Firebase Realtime Database (Google)</strong> — almacenamiento de datos</li>
+        <li><strong>Firebase Storage y Cloud Functions (Google)</strong> — almacenamiento de fotos y documentos, y control de acceso</li>
+        <li><strong>Expo Push Notification Service (Expo)</strong> — envío de notificaciones al dispositivo; recibe el identificador del dispositivo y el texto de la notificación</li>
       </ul>
 
       <h2>8. Cambios en esta política</h2>
@@ -198,7 +215,7 @@
       <p>Si tienes preguntas sobre esta política de privacidad, contacta con:</p>
       <div class="contact-box">
         <p>🏉 RugbyRoll</p>
-        <p>📧 <a href="mailto:rugbyroll.app@gmail.com">rugbyroll.app@gmail.com</a></p>
+        <p>📧 <a href="mailto:rugbyroll.soporte@gmail.com">rugbyroll.soporte@gmail.com</a></p>
       </div>
 
     </div>
